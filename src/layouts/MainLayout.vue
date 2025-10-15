@@ -152,12 +152,29 @@
               </router-link>
             </li>
 
-            <!-- Contacts & Chat -->
-            <li class="nav-item">
-              <router-link to="/contacts" class="nav-link" :class="{ active: $route.path === '/contacts' }">
-                <i class="nav-icon fas fa-comments"></i>
-                <p>Contacts & Chat</p>
-              </router-link>
+            <!-- Contacts Menu -->
+            <li class="nav-item" :class="{ 'menu-open': $route.path.startsWith('/contact') }">
+              <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/contact') }">
+                <i class="nav-icon fas fa-address-book"></i>
+                <p>
+                  Contacts
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <router-link to="/contacts" class="nav-link" :class="{ active: $route.path === '/contacts' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Contacts List</p>
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/contact-us" class="nav-link" :class="{ active: $route.path === '/contact-us' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Contact Us</p>
+                  </router-link>
+                </li>
+              </ul>
             </li>
 
             <!-- Examples Menu -->
@@ -183,6 +200,14 @@
                   </router-link>
                 </li>
               </ul>
+            </li>
+
+            <!-- Settings -->
+            <li class="nav-item">
+              <router-link to="/settings" class="nav-link" :class="{ active: $route.path === '/settings' }">
+                <i class="nav-icon fas fa-cog"></i>
+                <p>Settings</p>
+              </router-link>
             </li>
 
             <!-- Logout -->

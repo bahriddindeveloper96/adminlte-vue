@@ -25,8 +25,8 @@
               <div class="card-body box-profile">
                 <div class="text-center">
                   <img class="profile-user-img img-fluid img-circle"
-                       src="https://via.placeholder.com/128"
-                       alt="User profile picture">
+                       src="../assets/user2-160x160.jpg"
+                    >
                 </div>
                 <h3 class="profile-username text-center">Nina Mcintire</h3>
                 <p class="text-muted text-center">Software Engineer</p>

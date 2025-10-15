@@ -29,6 +29,10 @@ import ForgotPassword from '../views/auth/ForgotPassword.vue'
 
 // Contacts
 import Contacts from '../views/Contacts.vue'
+import ContactUs from '../views/ContactUs.vue'
+
+// Settings
+import Settings from '../views/Settings.vue'
 
 const routes = [
   // Auth Routes (without layout)
@@ -129,7 +133,20 @@ const routes = [
         path: '/contacts',
         name: 'Contacts',
         component: Contacts,
-        meta: { title: 'Contacts & Chat' }
+        meta: { title: 'Contacts' }
+      },
+      {
+        path: '/contact-us',
+        name: 'ContactUs',
+        component: ContactUs,
+        meta: { title: 'Contact Us' }
+      },
+      // Settings
+      {
+        path: '/settings',
+        name: 'Settings',
+        component: Settings,
+        meta: { title: 'Settings' }
       }
     ]
   },
