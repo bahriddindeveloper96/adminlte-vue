@@ -1,0 +1,24 @@
+{
+  "name": "adminlte-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "admin-lte": "^3.2.0",
+    "bootstrap": "^4.6.0",
+    "chart.js": "^4.5.1",
+    "jquery": "^3.6.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.4.0"
+  }
+}
