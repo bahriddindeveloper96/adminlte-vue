@@ -70,19 +70,19 @@
             <li class="nav-item">
               <router-link to="/" class="nav-link" :class="{ active: $route.path === '/' }">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Dashboard</p>
+                <p>{{ $t('nav.dashboard') }}</p>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/widgets" class="nav-link" :class="{ active: $route.path === '/widgets' }">
                 <i class="nav-icon fas fa-th"></i>
-                <p>Widgets</p>
+                <p>{{ $t('nav.widgets') }}</p>
               </router-link>
             </li>
             <li class="nav-item">
               <router-link to="/charts" class="nav-link" :class="{ active: $route.path === '/charts' }">
                 <i class="nav-icon fas fa-chart-pie"></i>
-                <p>Charts</p>
+                <p>{{ $t('nav.charts') }}</p>
               </router-link>
             </li>
             
@@ -91,7 +91,7 @@
               <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/forms') }">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
-                  Forms
+                  {{ $t('nav.forms') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -99,19 +99,19 @@
                 <li class="nav-item">
                   <router-link to="/forms/general" class="nav-link" :class="{ active: $route.path === '/forms/general' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>General Elements</p>
+                    <p>{{ $t('nav.generalForms') }}</p>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/forms/advanced" class="nav-link" :class="{ active: $route.path === '/forms/advanced' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Advanced Elements</p>
+                    <p>{{ $t('nav.advancedForms') }}</p>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/forms/validation" class="nav-link" :class="{ active: $route.path === '/forms/validation' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Validation</p>
+                    <p>{{ $t('nav.validation') }}</p>
                   </router-link>
                 </li>
               </ul>
@@ -122,7 +122,7 @@
               <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/tables') }">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
-                  Tables
+                  {{ $t('nav.tables') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -130,7 +130,7 @@
                 <li class="nav-item">
                   <router-link to="/tables/simple" class="nav-link" :class="{ active: $route.path === '/tables/simple' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Tables</p>
+                    <p>{{ $t('nav.simpleTables') }}</p>
                   </router-link>
                 </li>
               </ul>
@@ -140,7 +140,7 @@
             <li class="nav-item">
               <router-link to="/calendar" class="nav-link" :class="{ active: $route.path === '/calendar' }">
                 <i class="nav-icon far fa-calendar-alt"></i>
-                <p>Calendar</p>
+                <p>{{ $t('nav.calendar') }}</p>
               </router-link>
             </li>
 
@@ -148,7 +148,7 @@
             <li class="nav-item">
               <router-link to="/gallery" class="nav-link" :class="{ active: $route.path === '/gallery' }">
                 <i class="nav-icon far fa-image"></i>
-                <p>Gallery</p>
+                <p>{{ $t('nav.gallery') }}</p>
               </router-link>
             </li>
 
@@ -157,7 +157,7 @@
               <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/contact') }">
                 <i class="nav-icon fas fa-address-book"></i>
                 <p>
-                  Contacts
+                  {{ $t('nav.contacts') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -165,13 +165,13 @@
                 <li class="nav-item">
                   <router-link to="/contacts" class="nav-link" :class="{ active: $route.path === '/contacts' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Contacts List</p>
+                    <p>{{ $t('nav.contactsList') }}</p>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/contact-us" class="nav-link" :class="{ active: $route.path === '/contact-us' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Contact Us</p>
+                    <p>{{ $t('nav.contactUs') }}</p>
                   </router-link>
                 </li>
               </ul>
@@ -182,7 +182,7 @@
               <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/examples') }">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
-                  Examples
+                  {{ $t('nav.examples') }}
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -190,13 +190,13 @@
                 <li class="nav-item">
                   <router-link to="/examples/profile" class="nav-link" :class="{ active: $route.path === '/examples/profile' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Profile</p>
+                    <p>{{ $t('nav.profile') }}</p>
                   </router-link>
                 </li>
                 <li class="nav-item">
                   <router-link to="/examples/invoice" class="nav-link" :class="{ active: $route.path === '/examples/invoice' }">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Invoice</p>
+                    <p>{{ $t('nav.invoice') }}</p>
                   </router-link>
                 </li>
               </ul>
@@ -206,7 +206,7 @@
             <li class="nav-item">
               <router-link to="/settings" class="nav-link" :class="{ active: $route.path === '/settings' }">
                 <i class="nav-icon fas fa-cog"></i>
-                <p>Settings</p>
+                <p>{{ $t('nav.settings') }}</p>
               </router-link>
             </li>
 
@@ -214,7 +214,7 @@
             <li class="nav-item">
               <a @click="handleLogout" class="nav-link logout-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
-                <p>Logout</p>
+                <p>{{ $t('nav.logout') }}</p>
               </a>
             </li>
           </ul>
@@ -248,6 +248,17 @@ export default {
       window.AdminLTE.init()
     }
   },
+  watch: {
+    // Watch for route changes
+    '$route'() {
+      // Close sidebar on mobile when route changes (with small delay to ensure navigation completes)
+      this.$nextTick(() => {
+        setTimeout(() => {
+          this.closeSidebarOnMobile()
+        }, 100)
+      })
+    }
+  },
   methods: {
     handleLogout() {
       // Confirm logout
@@ -258,6 +269,20 @@ export default {
         
         // Redirect to login page
         this.$router.push('/login')
+      }
+    },
+    closeSidebarOnMobile() {
+      // Check if we're on mobile (screen width < 992px)
+      if (window.innerWidth < 992) {
+        // Remove sidebar-open class from body
+        document.body.classList.remove('sidebar-open')
+        document.body.classList.add('sidebar-closed', 'sidebar-collapse')
+        
+        // Remove overlay if exists
+        const overlay = document.querySelector('.sidebar-overlay')
+        if (overlay) {
+          overlay.remove()
+        }
       }
     }
   }
@@ -333,6 +358,8 @@ export default {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  pointer-events: auto !important;
+  z-index: 1050 !important;
 }
 
 .sidebar-modern .nav-sidebar .nav-link::before {
@@ -473,5 +500,22 @@ export default {
 
 .logout-link .nav-icon {
   color: #dc3545;
+}
+
+/* Mobile Sidebar Fix - Ensure links are clickable */
+@media (max-width: 991.98px) {
+  .main-sidebar {
+    z-index: 1040 !important;
+  }
+  
+  .sidebar .nav-link {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1050 !important;
+  }
+  
+  .sidebar-overlay {
+    z-index: 1039 !important;
+  }
 }
 </style>

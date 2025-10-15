@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Settings</h1>
+            <h1>{{ $t('settings.title') }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-              <li class="breadcrumb-item active">Settings</li>
+              <li class="breadcrumb-item"><router-link to="/">{{ $t('breadcrumb.home') }}</router-link></li>
+              <li class="breadcrumb-item active">{{ $t('breadcrumb.settings') }}</li>
             </ol>
           </div>
         </div>
@@ -37,7 +37,7 @@
                 <p class="text-muted text-center">{{ userProfile.role }}</p>
                 
                 <button class="btn btn-primary btn-block" @click="showUploadModal = true">
-                  <i class="fas fa-camera mr-2"></i>Change Photo
+                  <i class="fas fa-camera mr-2"></i>{{ $t('settings.changePhoto') }}
                 </button>
               </div>
             </div>
@@ -45,33 +45,33 @@
             <!-- Quick Links -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Quick Links</h3>
+                <h3 class="card-title">{{ $t('settings.quickLinks') }}</h3>
               </div>
               <div class="card-body p-0">
                 <ul class="nav nav-pills flex-column">
                   <li class="nav-item">
                     <a href="#" class="nav-link" @click.prevent="activeTab = 'profile'">
-                      <i class="fas fa-user mr-2"></i> Profile Settings
+                      <i class="fas fa-user mr-2"></i> {{ $t('settings.profileSettings') }}
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link" @click.prevent="activeTab = 'security'">
-                      <i class="fas fa-lock mr-2"></i> Security
+                      <i class="fas fa-lock mr-2"></i> {{ $t('settings.security') }}
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link" @click.prevent="activeTab = 'notifications'">
-                      <i class="fas fa-bell mr-2"></i> Notifications
+                      <i class="fas fa-bell mr-2"></i> {{ $t('settings.notifications') }}
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link" @click.prevent="activeTab = 'privacy'">
-                      <i class="fas fa-shield-alt mr-2"></i> Privacy
+                      <i class="fas fa-shield-alt mr-2"></i> {{ $t('settings.privacy') }}
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link" @click.prevent="activeTab = 'appearance'">
-                      <i class="fas fa-palette mr-2"></i> Appearance
+                      <i class="fas fa-palette mr-2"></i> {{ $t('settings.appearance') }}
                     </a>
                   </li>
                 </ul>
@@ -91,7 +91,7 @@
                       @click="activeTab = 'profile'"
                       href="#"
                     >
-                      <i class="fas fa-user mr-2"></i>Profile
+                      <i class="fas fa-user mr-2"></i>{{ $t('settings.profile.title') }}
                     </a>
                   </li>
                   <li class="nav-item">
@@ -101,7 +101,7 @@
                       @click="activeTab = 'security'"
                       href="#"
                     >
-                      <i class="fas fa-lock mr-2"></i>Security
+                      <i class="fas fa-lock mr-2"></i>{{ $t('settings.security.title') }}
                     </a>
                   </li>
                   <li class="nav-item">
@@ -111,7 +111,7 @@
                       @click="activeTab = 'notifications'"
                       href="#"
                     >
-                      <i class="fas fa-bell mr-2"></i>Notifications
+                      <i class="fas fa-bell mr-2"></i>{{ $t('settings.notifications.title') }}
                     </a>
                   </li>
                   <li class="nav-item">
@@ -121,7 +121,7 @@
                       @click="activeTab = 'privacy'"
                       href="#"
                     >
-                      <i class="fas fa-shield-alt mr-2"></i>Privacy
+                      <i class="fas fa-shield-alt mr-2"></i>{{ $t('settings.privacy.title') }}
                     </a>
                   </li>
                   <li class="nav-item">
@@ -131,7 +131,7 @@
                       @click="activeTab = 'appearance'"
                       href="#"
                     >
-                      <i class="fas fa-palette mr-2"></i>Appearance
+                      <i class="fas fa-palette mr-2"></i>{{ $t('settings.appearance.title') }}
                     </a>
                   </li>
                 </ul>
@@ -864,6 +864,11 @@ export default {
         zh: '中文',
         ar: 'العربية'
       }
+      // Change i18n locale
+      this.$i18n.locale = this.appearance.language
+      // Save to localStorage
+      localStorage.setItem('language', this.appearance.language)
+      
       this.successMessage = `Language changed to ${languages[this.appearance.language]}!`
       this.showSuccessAlert = true
       setTimeout(() => {
@@ -900,6 +905,13 @@ export default {
     const savedAppearance = localStorage.getItem('appearance')
     if (savedAppearance) {
       this.appearance = JSON.parse(savedAppearance)
+    }
+    
+    // Load saved language
+    const savedLanguage = localStorage.getItem('language')
+    if (savedLanguage) {
+      this.appearance.language = savedLanguage
+      this.$i18n.locale = savedLanguage
     }
   }
 }

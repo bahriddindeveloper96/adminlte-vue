@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contact Us</h1>
+            <h1>{{ $t('contactUs.title') }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-              <li class="breadcrumb-item active">Contact Us</li>
+              <li class="breadcrumb-item"><router-link to="/">{{ $t('breadcrumb.home') }}</router-link></li>
+              <li class="breadcrumb-item active">{{ $t('breadcrumb.contactUs') }}</li>
             </ol>
           </div>
         </div>
@@ -40,52 +40,52 @@
           <div class="col-7">
             <form @submit.prevent="submitForm">
               <div class="form-group">
-                <label for="inputName">Name</label>
+                <label for="inputName">{{ $t('contactUs.name') }}</label>
                 <input 
                   type="text" 
                   id="inputName" 
                   class="form-control" 
                   v-model="formData.name"
-                  placeholder="Enter your name"
+                  :placeholder="$t('contactUs.enterName')"
                   required
                 />
               </div>
               <div class="form-group">
-                <label for="inputEmail">E-Mail</label>
+                <label for="inputEmail">{{ $t('contactUs.email') }}</label>
                 <input 
                   type="email" 
                   id="inputEmail" 
                   class="form-control" 
                   v-model="formData.email"
-                  placeholder="Enter your email"
+                  :placeholder="$t('contactUs.enterEmail')"
                   required
                 />
               </div>
               <div class="form-group">
-                <label for="inputSubject">Subject</label>
+                <label for="inputSubject">{{ $t('contactUs.subject') }}</label>
                 <input 
                   type="text" 
                   id="inputSubject" 
                   class="form-control" 
                   v-model="formData.subject"
-                  placeholder="Enter subject"
+                  :placeholder="$t('contactUs.enterSubject')"
                   required
                 />
               </div>
               <div class="form-group">
-                <label for="inputMessage">Message</label>
+                <label for="inputMessage">{{ $t('contactUs.message') }}</label>
                 <textarea 
                   id="inputMessage" 
                   class="form-control" 
                   rows="4"
                   v-model="formData.message"
-                  placeholder="Enter your message"
+                  :placeholder="$t('contactUs.enterMessage')"
                   required
                 ></textarea>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">
-                  <i class="fas fa-paper-plane mr-2"></i>Send Message
+                  <i class="fas fa-paper-plane mr-2"></i>{{ $t('contactUs.sendMessage') }}
                 </button>
               </div>
             </form>
@@ -93,7 +93,7 @@
             <!-- Success Message -->
             <div v-if="showSuccess" class="alert alert-success alert-dismissible fade show" role="alert">
               <i class="fas fa-check-circle mr-2"></i>
-              <strong>Success!</strong> Your message has been sent successfully.
+              <strong>{{ $t('contactUs.success') }}</strong> {{ $t('contactUs.messageSent') }}
               <button type="button" class="close" @click="showSuccess = false">
                 <span aria-hidden="true">&times;</span>
               </button>

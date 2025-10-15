@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Contacts</h1>
+            <h1>{{ $t('contacts.title') }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-              <li class="breadcrumb-item active">Contacts</li>
+              <li class="breadcrumb-item"><router-link to="/">{{ $t('breadcrumb.home') }}</router-link></li>
+              <li class="breadcrumb-item active">{{ $t('breadcrumb.contacts') }}</li>
             </ol>
           </div>
         </div>
@@ -59,7 +59,7 @@
                       <i class="fas fa-comments"></i>
                     </a>
                     <a href="#" class="btn btn-sm btn-primary">
-                      <i class="fas fa-user"></i> View Profile
+                      <i class="fas fa-user"></i> {{ $t('contacts.viewProfile') }}
                     </a>
                   </div>
                 </div>

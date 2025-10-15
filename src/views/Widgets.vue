@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Widgets</h1>
+            <h1 class="m-0">{{ $t('nav.widgets') }}</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
-              <li class="breadcrumb-item active">Widgets</li>
+              <li class="breadcrumb-item"><router-link to="/">{{ $t('breadcrumb.home') }}</router-link></li>
+              <li class="breadcrumb-item active">{{ $t('breadcrumb.widgets') }}</li>
             </ol>
           </div>
         </div>
@@ -61,18 +61,19 @@
       </div>
     </div>
 
-    <h5 class="mt-4 mb-2">Small Box</h5>
+    <h5 class="mt-4 mb-2">{{ $t('widgets.smallBox') }}</h5>
     <div class="row">
       <div class="col-lg-3 col-6">
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>150</h3>
-            <p>New Orders</p>
+            <h3>{{ $t('nav.widgets') }}</h3>
+            <p>{{ $t('widgets.newOrders') }}</p>
           </div>
           <div class="icon">
             <i class="fas fa-shopping-cart"></i>
           </div>
           <a href="#" class="small-box-footer">
+            {{ $t('widgets.moreInfo') }} <i class="fas fa-arrow-circle-right"></i>
             More info <i class="fas fa-arrow-circle-right"></i>
           </a>
         </div>
