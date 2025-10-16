@@ -18,6 +18,7 @@
     "profile": "Профиль",
     "invoice": "Счет",
     "settings": "Настройки",
+    "products": "Товары",
     "logout": "Выход"
   },
   "breadcrumb": {
@@ -188,6 +189,26 @@
     "alreadyHaveAccount": "Уже есть аккаунт?",
     "dontHaveAccount": "Нет аккаунта?",
     "resetPassword": "Сбросить пароль"
+  },
+  "products": {
+    "title": "Товары",
+    "searchPlaceholder": "Поиск товаров...",
+    "addProduct": "Добавить товар",
+    "allProducts": "Все товары",
+    "electronics": "Электроника",
+    "clothing": "Одежда",
+    "books": "Книги",
+    "food": "Еда",
+    "view": "Просмотр",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "noProducts": "Товары не найдены",
+    "noProductsDesc": "Попробуйте изменить параметры поиска или фильтра.",
+    "addProductMessage": "Функция добавления товара будет реализована в ближайшее время!",
+    "viewing": "Просмотр товара",
+    "editing": "Редактирование товара",
+    "deleteConfirm": "Вы уверены, что хотите удалить",
+    "deleteSuccess": "Товар успешно удален!"
   },
   "common": {
     "save": "Сохранить",

@@ -177,6 +177,89 @@
               </ul>
             </li>
 
+            <!-- Products Menu -->
+            <li class="nav-item" :class="{ 'menu-open': $route.path.startsWith('/products') || $route.path.startsWith('/categories') }">
+              <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/products') || $route.path.startsWith('/categories') }">
+                <i class="nav-icon fas fa-shopping-bag"></i>
+                <p>
+                  {{ $t('nav.products') }}
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <router-link to="/products" class="nav-link" :class="{ active: $route.path === '/products' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.productsList') }}</p>
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/products/categories" class="nav-link" :class="{ active: $route.path === '/products/categories' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.categories') }}</p>
+                  </router-link>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Orders -->
+            <li class="nav-item">
+              <router-link to="/orders" class="nav-link" :class="{ active: $route.path.startsWith('/orders') }">
+                <i class="nav-icon fas fa-shopping-cart"></i>
+                <p>{{ $t('nav.orders') }}</p>
+              </router-link>
+            </li>
+
+            <!-- Shipping Menu -->
+            <li class="nav-item" :class="{ 'menu-open': $route.path.startsWith('/shipping') }">
+              <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/shipping') }">
+                <i class="nav-icon fas fa-truck"></i>
+                <p>
+                  {{ $t('nav.shipping') }}
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <router-link to="/shipping/methods" class="nav-link" :class="{ active: $route.path === '/shipping/methods' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.shippingMethods') }}</p>
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/shipping/tracking" class="nav-link" :class="{ active: $route.path === '/shipping/tracking' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.productTracking') }}</p>
+                  </router-link>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Payments Menu -->
+            <li class="nav-item" :class="{ 'menu-open': $route.path.startsWith('/payments') }">
+              <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/payments') }">
+                <i class="nav-icon fas fa-credit-card"></i>
+                <p>
+                  {{ $t('nav.payments') }}
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <router-link to="/payments/methods" class="nav-link" :class="{ active: $route.path === '/payments/methods' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.paymentMethods') }}</p>
+                  </router-link>
+                </li>
+                <li class="nav-item">
+                  <router-link to="/payments/status" class="nav-link" :class="{ active: $route.path === '/payments/status' }">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ $t('nav.paymentStatus') }}</p>
+                  </router-link>
+                </li>
+              </ul>
+            </li>
+
             <!-- Examples Menu -->
             <li class="nav-item" :class="{ 'menu-open': $route.path.startsWith('/examples') }">
               <a href="#" class="nav-link" :class="{ active: $route.path.startsWith('/examples') }">

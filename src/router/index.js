@@ -34,6 +34,24 @@ import ContactUs from '../views/ContactUs.vue'
 // Settings
 import Settings from '../views/Settings.vue'
 
+// Products
+import ProductsList from '../views/products/ProductsList.vue'
+import ProductView from '../views/products/ProductView.vue'
+import ProductEdit from '../views/products/ProductEdit.vue'
+import CategoryList from '../views/products/CategoryList.vue'
+
+// Shipping
+import ShippingMethods from '../views/shipping/ShippingMethods.vue'
+import ProductTracking from '../views/shipping/ProductTracking.vue'
+
+// Payments
+import PaymentMethods from '../views/payments/PaymentMethods.vue'
+import PaymentStatus from '../views/payments/PaymentStatus.vue'
+
+// Orders
+import OrdersList from '../views/orders/OrdersList.vue'
+import OrderView from '../views/orders/OrderView.vue'
+
 const routes = [
   // Auth Routes (without layout)
   {
@@ -141,12 +159,82 @@ const routes = [
         component: ContactUs,
         meta: { title: 'Contact Us' }
       },
+      // Products
+      {
+        path: '/products',
+        name: 'Products',
+        component: ProductsList,
+        meta: { title: 'Products' }
+      },
+      {
+        path: '/products/add',
+        name: 'ProductAdd',
+        component: ProductEdit,
+        meta: { title: 'Add Product' }
+      },
+      {
+        path: '/products/edit/:id',
+        name: 'ProductEdit',
+        component: ProductEdit,
+        meta: { title: 'Edit Product' }
+      },
+      {
+        path: '/products/categories',
+        name: 'ProductCategories',
+        component: CategoryList,
+        meta: { title: 'Product Categories' }
+      },
+      {
+        path: '/products/:id',
+        name: 'ProductView',
+        component: ProductView,
+        meta: { title: 'Product Details' }
+      },
       // Settings
       {
         path: '/settings',
         name: 'Settings',
         component: Settings,
         meta: { title: 'Settings' }
+      },
+      // Shipping
+      {
+        path: '/shipping/methods',
+        name: 'ShippingMethods',
+        component: ShippingMethods,
+        meta: { title: 'Shipping Methods' }
+      },
+      {
+        path: '/shipping/tracking',
+        name: 'ProductTracking',
+        component: ProductTracking,
+        meta: { title: 'Product Tracking' }
+      },
+      // Payments
+      {
+        path: '/payments/methods',
+        name: 'PaymentMethods',
+        component: PaymentMethods,
+        meta: { title: 'Payment Methods' }
+      },
+      {
+        path: '/payments/status',
+        name: 'PaymentStatus',
+        component: PaymentStatus,
+        meta: { title: 'Payment Status' }
+      },
+      // Orders
+      {
+        path: '/orders',
+        name: 'OrdersList',
+        component: OrdersList,
+        meta: { title: 'Orders' }
+      },
+      {
+        path: '/orders/:id',
+        name: 'OrderView',
+        component: OrderView,
+        meta: { title: 'Order Details' }
       }
     ]
   },
